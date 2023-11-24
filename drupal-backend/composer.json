@@ -1,0 +1,121 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 10 projects with Composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "composer/installers": "^2.1",
+        "cweagans/composer-patches": "*",
+        "drupal/admin_toolbar": "^3.3",
+        "drupal/core-composer-scaffold": "10.1.6",
+        "drupal/core-project-message": "10.1.6",
+        "drupal/core-recommended": "10.1.6",
+        "drupal/decoupled_router": "^2.0",
+        "drupal/getjwtonlogin": "^2.0",
+        "drupal/gin": "^3.0@RC",
+        "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/jwt": "^2.0",
+        "drupal/key": "^1.17",
+        "drupal/next": "^1.6",
+        "drupal/pathauto": "^1.12",
+        "drupal/redirect": "^1.9",
+        "drupal/restui": "^1.21",
+        "drupal/simple_oauth": "^5.2",
+        "drupal/subrequests": "^3.0",
+        "drupal/token": "^1.13",
+        "drush/drush": "^11.4.0",
+        "firebase/php-jwt": "^6.9",
+        "galbar/jsonpath": "^1.3",
+        "justinrainbow/json-schema": "^5.2",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "vlucas/phpdotenv": "^5.1",
+        "webflo/drupal-finder": "^1.2"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.1.6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "discard-changes": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "drupal/core-project-message": true,
+            "php-http/discovery": true
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Remove trailing slashes on void elements": "https://www.drupal.org/files/issues/2023-03-09/3346188-6-10.1.x.patch",
+                "Status report wrongly warns of APCu memory limit when admin language is not English": "https://www.drupal.org/files/issues/2022-12-18/status-report-apcu-3142928-30.patch",
+                "Remove error “Public files directory Not fully protected” in non apache servers": "https://www.drupal.org/files/issues/2023-01-25/protect-public-directoty-core_0.patch"
+            },
+            "drupal/subrequests": {
+                "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
+            },
+            "drupal/decoupled_router": {
+                "Unable to resolve path on node in other language than default 66": "https://www.drupal.org/files/issues/2023-10-27/decoupled_router-3111456-resolve_lang-66-3397122.patch"
+            }
+        }
+    }
+}

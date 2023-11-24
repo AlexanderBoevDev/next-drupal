@@ -1,0 +1,14 @@
+uuid: 939ae90c-653d-41c5-9f45-258a2de651e9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.administrator
+  module:
+    - user
+id: user_add_role_action.administrator
+label: 'Добавьте роль Администратор выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administrator

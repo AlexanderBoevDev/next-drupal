@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: ru
+uuid: 46bc7aa7-0c13-4f8b-9fdc-eca977fc5410
+name: 'Next.js for Drupal'
+mail: example@drupal-backend.docker.localhost
+slogan: ''
+page:
+  403: /node/2
+  404: /node/3
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: ru

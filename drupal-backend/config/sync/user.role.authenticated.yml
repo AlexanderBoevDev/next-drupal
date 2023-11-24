@@ -1,0 +1,16 @@
+uuid: 03562ca1-6c1b-4588-a2d1-8923af4d1e84
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Аутентифицированный пользователь'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

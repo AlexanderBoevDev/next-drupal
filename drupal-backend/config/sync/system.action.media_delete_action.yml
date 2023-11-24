@@ -1,0 +1,13 @@
+uuid: 3cbc808d-7f57-43eb-9e11-b5ca45c4a5b3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: FrZy1tmuXJcOxhXlBoI1Hsnen5TT-9OCC1iolWH84go
+id: media_delete_action
+label: 'Удалить медиа'
+type: media
+plugin: 'entity:delete_action:media'
+configuration: {  }

@@ -1,0 +1,14 @@
+uuid: 0a4ddef9-48fe-4f08-bb93-c0858a67eb0f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - filter.format.ckeditor
+  module:
+    - filter
+id: moderator
+label: Модератор
+weight: 2
+is_admin: null
+permissions:
+  - 'use text format ckeditor'

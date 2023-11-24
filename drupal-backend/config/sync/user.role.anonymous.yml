@@ -1,0 +1,16 @@
+uuid: 4394bda6-5a70-48e0-bdfa-fc54280a7feb
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Анонимный пользователь'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

@@ -1,0 +1,11 @@
+uuid: c63afd3a-7ecb-4073-8d6e-c67b6eb9c032
+langcode: ru
+status: true
+dependencies: {  }
+id: next_js
+label: Next.js
+base_url: 'http://localhost:3000'
+preview_url: 'http://localhost:3000/api/preview'
+preview_secret: secret
+revalidate_url: ''
+revalidate_secret: ''

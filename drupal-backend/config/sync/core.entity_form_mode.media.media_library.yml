@@ -1,0 +1,15 @@
+uuid: 8aff51a5-0796-4ff5-a26a-7a354929ee66
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - media_library
+_core:
+  default_config_hash: Tdhz-aDHfDoV1Ul9umtItxGTrjkFzoNAkDw8FWXjYA0
+id: media.media_library
+label: Медиа-библиотека
+targetEntityType: media
+cache: true

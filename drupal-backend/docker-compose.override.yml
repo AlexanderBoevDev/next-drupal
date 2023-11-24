@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+#  crond:
+#    image: wodby/drupal:$DRUPAL_TAG
+#    environment:
+#      PHP_FPM_CLEAR_ENV: "no"
+#    volumes:
+#      - codebase:/var/www/html
+
+  php:
+#    image: wodby/drupal:$DRUPAL_TAG
+#    volumes:
+#      - codebase:/var/www/html
+    environment:
+      PHP_FPM_CLEAR_ENV: "no"
+      PHP_MAX_EXECUTION_TIME: 50000
+      PHP_MAX_INPUT_TIME: 2000000
+      PHP_MAX_INPUT_VARS: 50000
+      PHP_MYSQLI_CACHE_SIZE: 20000
+      PHP_MAX_FILE_UPLOADS: 50000
+      PHP_FPM_PM_MAX_REQUESTS: 5000
+      PHP_APCU_ENABLED: 1
+      PHP_APCU_SHM_SIZE: 32M
+      PHP_POST_MAX_SIZE: 1024M
+      PHP_MEMORY_LIMIT: 2048M
+      PHP_REALPATH_CACHE_TTL: 3000
+      PHP_UPLOAD_MAX_FILESIZE: 128000M
+
+  nginx:
+#    volumes:
+#      - codebase:/var/www/html
+    environment:
+      NGINX_CLIENT_BODY_TIMEOUT: 50000s
+      NGINX_CLIENT_HEADER_TIMEOUT: 50000s
+      NGINX_FASTCGI_READ_TIMEOUT: 50000
+      NGINX_KEEPALIVE_TIMEOUT: 50000s
+      NGINX_SEND_TIMEOUT: 50000s

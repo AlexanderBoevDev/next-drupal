@@ -1,0 +1,11 @@
+uuid: 1ce828cb-2d9b-494d-888d-ea50f6cda645
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Системная страница'
+type: system_page
+description: 'Системная страница - данный тип материала предназначен для создания системных страниц под ошибки 403 или 404.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

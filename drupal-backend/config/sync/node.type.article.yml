@@ -1,0 +1,11 @@
+uuid: a84cfc53-f635-4ac0-8451-5b599c3a6842
+langcode: ru
+status: true
+dependencies: {  }
+name: Новость
+type: article
+description: 'Новость - данный тип материала предназначен для публикации новостей на сайте.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

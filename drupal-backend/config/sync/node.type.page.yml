@@ -1,0 +1,11 @@
+uuid: 71ed843d-239f-4c62-8992-c45039f18d0b
+langcode: ru
+status: true
+dependencies: {  }
+name: Страница
+type: page
+description: 'Страница - данный тип материала предназначен для отображения статичных страниц таких как главная страница, о компании, контакты.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

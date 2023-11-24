@@ -1,0 +1,14 @@
+uuid: 875f0eec-fc33-42b6-9180-e293791dd96e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.moderator
+  module:
+    - user
+id: user_add_role_action.moderator
+label: 'Добавьте роль Модератор выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: moderator

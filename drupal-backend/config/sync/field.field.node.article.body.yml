@@ -1,0 +1,26 @@
+uuid: 391cb065-70a0-42cd-9694-1ad982b30c15
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.ckeditor
+    - node.type.article
+  module:
+    - text
+id: node.article.body
+field_name: body
+entity_type: node
+bundle: article
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - ckeditor
+field_type: text_with_summary

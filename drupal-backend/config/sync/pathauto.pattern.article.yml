@@ -1,0 +1,22 @@
+uuid: 134fdc78-f563-465c-b07e-16fc97fd2bf4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: article
+label: Новость
+type: 'canonical_entities:node'
+pattern: '/blog/[node:title]'
+selection_criteria:
+  e8b960a7-c133-4bad-9f33-89e006efac33:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e8b960a7-c133-4bad-9f33-89e006efac33
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }

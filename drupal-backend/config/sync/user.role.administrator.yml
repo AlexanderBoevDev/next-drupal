@@ -1,0 +1,14 @@
+uuid: 26ba7b30-88d2-42c2-bd54-4e0a9c403355
+langcode: ru
+status: true
+dependencies:
+  config:
+    - filter.format.ckeditor
+  module:
+    - filter
+id: administrator
+label: Администратор
+weight: 3
+is_admin: null
+permissions:
+  - 'use text format ckeditor'
